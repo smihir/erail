@@ -1,5 +1,5 @@
 
-class erail:
+class client:
     import requests
     import datetime
     URL = "http://api.erail.in/{0}/"
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         with open(".key.erail", 'w') as f:
             f.write(key)
 
-    e = erail(key)
+    e = client(key)
     #r = e.trains_at_station('NDLS', 1, 'BCT')
     r = e.live_status(12138, 'NDLS', datetime.date(2015, 3, 15))
     print type(r)
